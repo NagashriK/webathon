@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightblue;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: #3398FF;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 10;
+  background-color: green;
+
+}
+
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<script>
+function submitFun() {
+var name = document.getElementById("userId").value;
+var email = document.getElementById("emailId").value;
+var password = document.getElementById("password").value;
+var phone = document.getElementById("phone").value;
+var address = document.getElementById("address").value;
+
+if (name ==='' || email ==='' || password ==='' || phone ==='' || address ==='') 
+	alert("Registration Failed");
+else
+	alert("Registration Successful");
+}
+</script>
+</head>
+
+<body>
+
+<form action="#" method="post" name="form_name" id="form_id" class="form_class">
+  <div class="container">
+    <h1>User Registration Form</h1>
+    <p>Please fill all the details.</p>
+    <hr>
+
+	  <label for="userId"><b>User Id</b></label>
+    <input type="text" placeholder="Enter User Id" name="userId" id="userId" >
+    
+    <label for="emailId"><b>Email Id</b></label>
+    <input type="text" placeholder="Enter Email Id" name="emailId" id="emailId" >
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" >
+
+    <label for="phone"><b>Phone Number</b></label>
+    <input type="text" placeholder="Enter Phone Number" name="phone" id="phone" >
+    
+    
+    <label for="address"><b>Address</b></label>
+    <input type="text" placeholder="Enter Address" name="address" id="address" >
+    <hr>
+    
+    <input type="button" name="submit" id="submit" value="Submit" onclick="submitFun()" class="registerbtn"/>
+  
+  </div>
+  
+</form>
+</body>
+</html>
