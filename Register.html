@@ -19,9 +19,15 @@ var phone = document.getElementById("phone").value;
 var address = document.getElementById("address").value;
 
 if (name ==='' || email ==='' || password ==='' || phone ==='' || address ==='') 
+{
 	alert("Registration Failed");
-else 
+	window.location.reload(true);
+}
+else
+{
     alert("Registration Successful");
+    window.location.reload(true);
+}
 }
 </script>
 <style>
@@ -119,7 +125,7 @@ h2 {
 </head>
 <body>
 <div class="signup-form">
-    <form action="/Register.html" method="post" name="form_name" id="form_name">
+    <form method="post" name="form_name" id="form_name">
 		<h2>Register </h2>
 		<hr>
         <div class="form-group">
